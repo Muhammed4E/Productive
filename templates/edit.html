@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block body %}
+<main class="form note">
+    <div class="form-container note">
+        <form action="/edit" method="post" id="edit-form" class="note">
+            <input type="hidden" name="note_id" value="{{ note[0] }}">
+            <input type="text" name="title" id="title" placeholder="Title" value="{{ note[2] }}">
+            <textarea type="text" name="note" id="note" placeholder="Note">{{ note[3] }}</textarea>
+            <div class="buttons">
+                <button type="submit">Save</button>
+                <!-- <button><a href="/notes">Cancle</a></button> -->
+                <a href="/notes">Cancle</a>
+            </div>
+        </form>
+    </div>
+</main>
+{% endblock %}

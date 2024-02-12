@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block body %}
+    <nav>
+        <ul>
+            <li><a href="/signup">Sign up</a></li>
+            <li><a href="/login">Login</a></li>
+        </ul>
+    </nav>
+    <header>
+        <div class="content">
+            <div class="content-container">
+                <div class="text">
+                    <h1>Become more productive!</h1>
+                    <p>Save and organize<br>your <span class="auto-type" id="auto-type"></span></p>
+                </div>
+                <a href="/login">Login</a>
+                <a href="/signup">Sign up</a>
+            </div>
+        </div>
+        <div class="image">
+            <img src="../static/images/header_image.png">
+        </div>
+    </header>
+    <!-- Import Typed library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="../static/script.js"></script>
+{% endblock %}

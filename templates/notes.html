@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block body %}
+<main class="notes">
+    <button class="nav"><a href="/logout">Logout</a></button>
+    <div class="top-menu">
+        <h1>Notes</h1>
+        <hr>
+    </div>
+    <div class="notes"> 
+        {% for note in notes %}
+        <div class="note">
+            <span class="title">{{ note[2] }}</span>
+            <p>
+                {% for line in note[3] %}
+                {{ line }}<br>
+                {% endfor %}
+            </p>
+            <div class="tools">
+                <form action="/delete" method="post">
+                    <input type="hidden" name="id" value="{{ note[0] }}">
+                    <button type="submit">
+                        <i class='bx bx-message-square-x' ></i>
+                    </button>
+                </form>
+                <form action="/edit" method="post">
+                    <input type="hidden" name="id" value="{{ note[0] }}">
+                    <button type="submit">
+                        <i class='bx bxs-edit' ></i>
+                    </button>
+                </form>
+                <form action="/edit" method="post">
+                    <input type="hidden" name="id" value="{{ note[0] }}">
+                    <button type="submit">
+                        <i class='bx bx-expand'></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <a href="/new"> <i class='bx bx-plus-medical'></i></a>
+</main>
+{% endblock %}

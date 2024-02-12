@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block body %}
+<main class="form">
+    <a href="/" class="arrow"><i class='bx bx-arrow-back'></i></a>
+    <button class="nav"><a href="/signup">Sign up</a></button>
+    <div class="form-container new">
+        <form action="/login" method="post" id="login-form">
+            <div class="heading-container">
+                <h2>Login</h2>
+            </div>
+            <div class="field">
+                <input type="text" name="username" placeholder="Username" id="username" autocomplete="off">
+                <i class='bx bxs-check-circle'></i>
+                <small>Error</small>
+            </div>
+            <div class="field">
+                <input type="password" name="password" placeholder="Password" id="password">
+                <i class='bx bxs-check-circle'></i>
+                <small>Erorr</small>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</main>
+<script>
+    function myFun(data) {
+        return data
+    }
+    let users = myFun({{users | tojson}});
+</script>
+<script src="../static/script.js"></script>
+{% endblock %}

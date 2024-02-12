@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block body %}
+<main class="form note">
+    <div class="form-container note">
+        <form action="/new" method="post" id="new-form" class="note">
+            <input type="text" name="title" id="title" placeholder="Title">
+            <textarea type="text" name="note" id="note" placeholder="Note"></textarea>
+            <div class="buttons">
+                <button type="submit">Save</button>
+                <!-- <button><a href="/notes">Cancle</a></button> -->
+                <a href="/notes">Cancle</a>
+            </div>
+        </form>
+    </div>
+</main>
+{% endblock %}
