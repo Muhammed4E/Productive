@@ -1,4 +1,4 @@
-# Simple Note Taking App
+# Productive - Simple Note Taking App
 
 This is a simple note-taking web application built with Flask, SQLite3, HTML, CSS, JavaScript, and Jinja. The application allows users to add, edit, delete, and view their notes conveniently.
 
