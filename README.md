@@ -1,5 +1,7 @@
 # Productive - Simple Note Taking App
 
+![Project Mockup](https://github.com/Muhammed4E/Productive/blob/main/images/mockup.png?raw=true)
+
 This is a simple note-taking web application built with Flask, SQLite3, HTML, CSS, JavaScript, and Jinja. The application allows users to add, edit, delete, and view their notes conveniently.
 
 ## Installation
